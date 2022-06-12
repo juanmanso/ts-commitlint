@@ -1,0 +1,12 @@
+{
+  "name": "ts-commitlint",
+  "version": "1.0.0",
+  "description": "Set of tools to guarantee accurate contributing guidelines on version control",
+  "main": "index.ts",
+  "repository": "www.github.com/juanmanso/ts-commitlint",
+  "author": "Juan Manso",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "commitlint": "17.0.2"
+  }
+}
