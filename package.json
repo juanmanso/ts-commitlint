@@ -6,6 +6,9 @@
   "repository": "www.github.com/juanmanso/ts-commitlint",
   "author": "Juan Manso",
   "license": "GPL-3.0",
+  "scripts": {
+    "commitlint": "commitlint"
+  },
   "devDependencies": {
     "commitlint": "17.0.2"
   }
