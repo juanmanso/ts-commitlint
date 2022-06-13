@@ -38,7 +38,7 @@ export const permissiveCommitRules: Partial<RulesConfig> = {
 };
 
 const commitHeaderPattern = /^(\w*)(?: \(([\w$.\-*/ ]*)\))?: (.+)$/;
-const branchHeaderPattern = /^(\w*)(?: \/([\w$.\-*/ ]*))?$/;
+const branchHeaderPattern = /^(\w*)(\/(\w*\-?)+)+$/;
 
 export const parserPreset: ParserPreset = {
   parserOpts: {

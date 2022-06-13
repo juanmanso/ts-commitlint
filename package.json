@@ -10,7 +10,7 @@
     "commitlint": "commitlint -g .commitlint/commitlint.config.ts",
     "commitlint:debug": "npx conventional-commits-parser",
     "commitlint:commitMsg": "commitlint -g .commitlint/commitMsg.config.ts",
-    "commitlint:branchName": "git reflog | awk 'NR==1{ print $8}' | commitlint -g .commitlint/branchName.config.ts"
+    "commitlint:branchName": "git rev-parse --abbrev-ref HEAD| commitlint -g .commitlint/branchName.config.ts"
   },
   "devDependencies": {
     "commitlint": "17.0.2",
