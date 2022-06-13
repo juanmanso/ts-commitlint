@@ -18,10 +18,15 @@ const baseTypeStringArray = [
 ];
 
 const wipAllowedCommitTypeStringArray = ['fixup', 'stash', 'wip'];
-
 const permissiveCommitTypeStringArray = [
   ...baseTypeStringArray,
   ...wipAllowedCommitTypeStringArray,
+];
+
+const branchReservedNames = ['main', 'staging'];
+const branchNameTypeStringArray = [
+  ...baseTypeStringArray,
+  ...branchReservedNames,
 ];
 
 export const baseRules: Partial<RulesConfig> = {
@@ -37,8 +42,15 @@ export const permissiveCommitRules: Partial<RulesConfig> = {
   'type-enum': [2, 'always', permissiveCommitTypeStringArray],
 };
 
+export const branchNameRules: Partial<RulesConfig> = {
+  'header-max-length': [2, 'always', MAX_AMOUNT_CHARS_ON_COMMIT_HEADER],
+  'subject-empty': [1, 'never'],
+  'type-empty': [2, 'never'],
+  'type-enum': [2, 'always', branchNameTypeStringArray],
+};
+
 const commitHeaderPattern = /^(\w*)(?: \(([\w$.\-*/ ]*)\))?: (.+)$/;
-const branchHeaderPattern = /^(\w*)(\/(\w*\-?)+)+$/;
+const branchHeaderPattern = /^(\w*)(\/([\w$.\-* ]*))?$/;
 
 export const parserPreset: ParserPreset = {
   parserOpts: {

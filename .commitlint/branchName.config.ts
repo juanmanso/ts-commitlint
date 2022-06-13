@@ -1,8 +1,8 @@
 import type { UserConfig } from '@commitlint/types';
-import { baseRules, branchParserPreset } from './consts';
+import { branchNameRules, branchParserPreset } from './consts';
 
 const config: UserConfig = {
-  rules: baseRules,
+  rules: branchNameRules,
   parserPreset: branchParserPreset,
 };
 
