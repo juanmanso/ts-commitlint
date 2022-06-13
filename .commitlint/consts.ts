@@ -38,11 +38,32 @@ export const permissiveCommitRules: Partial<RulesConfig> = {
 };
 
 const commitHeaderPattern = /^(\w*)(?: \(([\w$.\-*/ ]*)\))?: (.+)$/;
+const branchHeaderPattern = /^(\w*)(?: \/([\w$.\-*/ ]*))?$/;
 
 export const parserPreset: ParserPreset = {
   parserOpts: {
     headerPattern: commitHeaderPattern,
     headerCorrespondence: ['type', 'scope', 'subject'],
+    referenceActions: [
+      'close',
+      'closes',
+      'closed',
+      'fix',
+      'fixes',
+      'fixed',
+      'resolve',
+      'resolves',
+      'resolved',
+    ], // Default value
+    noteKeywords: ['BREAKING CHANGE'], // Default value
+    commentChar: '#',
+  },
+};
+
+export const branchParserPreset: ParserPreset = {
+  parserOpts: {
+    headerPattern: branchHeaderPattern,
+    headerCorrespondence: ['type', 'subject'],
     referenceActions: [
       'close',
       'closes',
