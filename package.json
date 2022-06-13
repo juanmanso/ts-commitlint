@@ -10,7 +10,8 @@
     "commitlint": "commitlint -g .commitlint/commitlint.config.ts",
     "commitlint:debug": "npx conventional-commits-parser",
     "commitlint:commitMsg": "commitlint -g .commitlint/commitMsg.config.ts",
-    "commitlint:branchName": "git rev-parse --abbrev-ref HEAD| commitlint -g .commitlint/branchName.config.ts"
+    "commitlint:branchName": "git rev-parse --abbrev-ref HEAD| commitlint -g .commitlint/branchName.config.ts",
+    "commitlint:commitsPrePush": "git show-branch | sed \"s/].*//\" | grep \"\\*\" | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | tail -n1 | sed \"s/^.*\\[//\" | xargs -n 1 yarn commitlint --from "
   },
   "devDependencies": {
     "commitlint": "17.0.2",
