@@ -17,11 +17,24 @@ const baseTypeStringArray = [
   'test',
 ];
 
+const wipAllowedCommitTypeStringArray = ['fixup', 'stash', 'wip'];
+
+const permissiveCommitTypeStringArray = [
+  ...baseTypeStringArray,
+  ...wipAllowedCommitTypeStringArray,
+];
+
 export const baseRules: Partial<RulesConfig> = {
   'header-max-length': [2, 'always', MAX_AMOUNT_CHARS_ON_COMMIT_HEADER],
   'subject-empty': [2, 'never'],
   'type-empty': [2, 'never'],
   'type-enum': [2, 'always', baseTypeStringArray],
+};
+
+export const permissiveCommitRules: Partial<RulesConfig> = {
+  'header-max-length': [2, 'always', MAX_AMOUNT_CHARS_ON_COMMIT_HEADER],
+  'type-empty': [2, 'never'],
+  'type-enum': [2, 'always', permissiveCommitTypeStringArray],
 };
 
 const commitHeaderPattern = /^(\w*)(?: \(([\w$.\-*/ ]*)\))?: (.+)$/;

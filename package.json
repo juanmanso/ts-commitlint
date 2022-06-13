@@ -8,7 +8,8 @@
   "license": "GPL-3.0",
   "scripts": {
     "commitlint": "commitlint -g .commitlint/commitlint.config.ts",
-    "commitlint:debug": "npx conventional-commits-parser"
+    "commitlint:debug": "npx conventional-commits-parser",
+    "commitlint:commitMsg": "commitlint -g .commitlint/commitMsg.config.ts"
   },
   "devDependencies": {
     "commitlint": "17.0.2",
@@ -16,7 +17,7 @@
   },
   "husky":{
     "hooks": {
-      "commit-msg": "yarn commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "yarn commitlint:commitMsg -E HUSKY_GIT_PARAMS"
     }
   }
 }

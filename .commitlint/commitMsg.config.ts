@@ -1,8 +1,8 @@
 import type { UserConfig } from '@commitlint/types';
-import { baseRules, parserPreset } from './consts';
+import { parserPreset, permissiveCommitRules } from './consts';
 
 const config: UserConfig = {
-  rules: baseRules,
+  rules: permissiveCommitRules,
   parserPreset,
 };
 
