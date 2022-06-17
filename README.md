@@ -10,3 +10,8 @@ names and messages to match contributing guidelines.
 This toolset is powered up by the commitlint dependency. With that, we
 can parse commitlint messages and any other string input to match the rules
 given by the chosen configuration.
+
+### 📑 Documentation
+
+*Dependencies*
+- [`commitlint`](./docs/commitlint.md)
