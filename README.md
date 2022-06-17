@@ -15,3 +15,5 @@ given by the chosen configuration.
 
 *Dependencies*
 - [`commitlint`](./docs/commitlint.md)
+- [`husky`](./docs/husky.md)
+
