@@ -17,3 +17,6 @@ given by the chosen configuration.
 - [`commitlint`](./docs/commitlint.md)
 - [`husky`](./docs/husky.md)
 
+*Toolset*
+- [`commitDebug`](./docs/commitDebug.md)
+
