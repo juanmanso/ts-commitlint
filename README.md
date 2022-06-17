@@ -19,4 +19,5 @@ given by the chosen configuration.
 
 *Toolset*
 - [`commitDebug`](./docs/commitDebug.md)
+- [`commitMsg`](./docs/commitMsg.md)
 
