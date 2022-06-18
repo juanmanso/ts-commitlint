@@ -21,5 +21,5 @@ given by the chosen configuration.
 - [`commitDebug`](./docs/commitDebug.md)
 - [`commitMsg`](./docs/commitMsg.md)
 - [`branchName`](./docs/branchName.md)
-- [`commitPrePush`](./docs/commitPrePush.md)
+- [`commitPrePush`](./docs/commitsPrePush.md)
 
